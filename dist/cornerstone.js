@@ -1,4 +1,4 @@
-/*! cornerstone-core - 0.0.0-semantically-released - 2023-11-29 | (c) 2016 Chris Hafey | https://github.com/cornerstonejs/cornerstone */
+/*! cornerstone-core - 1.0.0-semantically-released - 2023-11-29 | (c) 2016 Chris Hafey | https://github.com/cornerstonejs/cornerstone */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
