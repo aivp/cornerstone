@@ -1,4 +1,4 @@
-/*! cornerstone-core - 0.0.0-semantically-released - 2023-09-06 | (c) 2016 Chris Hafey | https://github.com/cornerstonejs/cornerstone */
+/*! cornerstone-core - 0.0.0-semantically-released - 2023-11-29 | (c) 2016 Chris Hafey | https://github.com/cornerstonejs/cornerstone */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
@@ -74,7 +74,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "90e60b6e3656c8b88be1";
+/******/ 	var hotCurrentHash = "a82744dbe09cd4cb052c";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -3291,16 +3291,14 @@ var unknownImageLoader;
  * @memberof ImageLoader
  */
 function loadImageFromImageLoader(imageId, options) {
-  console.log('loadImageFromImageLoader');
-  console.log('loadImageFromImageLoader123');
-  var colonIndex = imageId.indexOf(':');
+  var colonIndex = imageId.indexOf(":");
   var scheme = imageId.substring(0, colonIndex);
   var loader = imageLoaders[scheme];
   if (loader === undefined || loader === null) {
     if (unknownImageLoader !== undefined) {
       return unknownImageLoader(imageId);
     }
-    throw new Error('loadImageFromImageLoader: no image loader for imageId');
+    throw new Error("loadImageFromImageLoader: no image loader for imageId");
   }
   var imageLoadObject = loader(imageId, options);
 
@@ -3331,7 +3329,7 @@ function loadImageFromImageLoader(imageId, options) {
  */
 function loadImage(imageId, options) {
   if (imageId === undefined) {
-    throw new Error('loadImage: parameter imageId must not be undefined');
+    throw new Error("loadImage: parameter imageId must not be undefined");
   }
   var imageLoadObject = Object(_imageCache_js__WEBPACK_IMPORTED_MODULE_0__["getImageLoadObject"])(imageId);
   if (imageLoadObject !== undefined) {
@@ -3354,7 +3352,7 @@ function loadImage(imageId, options) {
  */
 function loadAndCacheImage(imageId, options) {
   if (imageId === undefined) {
-    throw new Error('loadAndCacheImage: parameter imageId must not be undefined');
+    throw new Error("loadAndCacheImage: parameter imageId must not be undefined");
   }
   var imageLoadObject = Object(_imageCache_js__WEBPACK_IMPORTED_MODULE_0__["getImageLoadObject"])(imageId);
   if (imageLoadObject !== undefined) {
